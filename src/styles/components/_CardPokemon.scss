@@ -1,9 +1,57 @@
-.cardPokemon{
-    width: 40%;
-    padding: 30px 20px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-}
+.cardPokemon {
+    user-select: none;
+    max-width: 300px; 
+    margin: 1rem; 
+    border: 1px solid #ffffff22;
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: .7rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    transition: .5s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; 
+    
+  }
+  
+  .cardPokemon:hover {
+    border: 1px solid #ffffff44;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    transform: scale(1.015);
+    filter: brightness(1);
+  }
+  
+  .cardPokemon img { 
+    border-radius: .5rem;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .cardPokemon::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%; 
+    height: 200%;
+    background-color: rgba(255, 255, 255, 0.1); 
+    transform: rotate(45deg);
+    transition: transform 0.5s, opacity 0.5s; 
+    opacity: 0; 
+    z-index: 0; 
+  }
+  .cardPokemon:hover::before {
+    transform: rotate(45deg) translate(100%, -100%);
+    opacity: 1; 
+  }
+
+
 
 .cardPokemon h3{
     width: 80px;
@@ -16,15 +64,11 @@
 
 }
 
-.cardPokemon img{
-   width: 40%;
-    margin: 20px auto;
-}
-
 
 .pokeName{
     text-align: center;
     font-weight: 600;
+    color: #ffffff;
 }
 
 

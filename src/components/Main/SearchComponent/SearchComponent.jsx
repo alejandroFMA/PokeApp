@@ -9,9 +9,20 @@ import "../../../styles/components/_SearchComponent.scss"
 const SearchComponent = () => {
 
   const {pokemons, setPokemons} = useContext(PokeContext)
-
+  const [loading, setLoading] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('');
 
   const fetchPokemon = async (searchedPokemon) => {
+    setLoading(true)
+    setErrorMessage('');
+
+    if (pokemons.some(pokemon => pokemon.name.toLowerCase() === searchedPokemon.toLowerCase())) {
+      setErrorMessage(`You already searched ${searchedPokemon}`);
+      setLoading(false)    
+      return;
+    }
+
+    const delay = 1000
     try {
       const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${searchedPokemon.toLowerCase()}`);
       console.log(response)
@@ -22,13 +33,14 @@ const SearchComponent = () => {
         image: response.data.sprites.other["official-artwork"].front_default
       };
 
-      console.log(newPokemon)
-
       
       setPokemons(prevPokemons =>[newPokemon, ...prevPokemons ]);
     } catch (error) {
       console.error("Error fetching data:", error);
-    }
+      setErrorMessage(`${searchedPokemon} not found`);
+      setLoading(false)  
+    } finally{
+      setTimeout(() => setLoading(false), delay);    }
   };
 
 
@@ -49,7 +61,8 @@ const SearchComponent = () => {
     <Form
     onSearch={handleSearch}/>
     <button type="button" onClick={clearList}>CLEAR</button>
-    <ListPokemon pokemons={pokemons}/>
+    {errorMessage && <h3>{errorMessage}</h3>}
+    {loading ? <div className="pokeloading"></div> : <ListPokemon pokemons={pokemons} />}
     </div>
   </>
 };
