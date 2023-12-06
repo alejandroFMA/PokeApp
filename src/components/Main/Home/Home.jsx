@@ -8,6 +8,7 @@ const Home = () => {
     const fetchAllPokemon = async () => {
       try {
         const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        //https://pokeapi.co/api/v2/pokemon/?limit=151
         setPokemonDetails(response.data); 
       } catch (error) {
         console.error("Error fetching Pokemon details:", error);
