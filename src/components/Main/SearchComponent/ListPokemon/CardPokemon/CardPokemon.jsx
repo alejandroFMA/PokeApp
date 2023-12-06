@@ -1,11 +1,13 @@
 import React from "react";
+import "../../../../../styles/components/_CardPokemon.scss"
 
-const CardPokemon = () => {
+const CardPokemon = ({id, title, image}) => {
+  
   return <>
-  <article>
-    <p>Numero</p>
-    <img src=""></img>
-    <p>Nombre</p>
+  <article className="cardPokemon">
+    <h3>#{id}</h3>
+    <img src={image} ></img>
+    <p className="pokeName">{title}</p>
   </article>
   </>
 };
