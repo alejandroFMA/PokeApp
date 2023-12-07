@@ -1,9 +1,13 @@
-.list_pokemon{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around; 
-        gap: 1rem;
+.list_pokemon {
+  display: grid;
+  grid-gap: 10px; 
+  grid-auto-rows: auto; 
+  justify-content: center; 
+  grid-template-columns: repeat(3, 300px);
 }
+
+
+
 
 .pokeloading {
     position: relative;
@@ -47,3 +51,15 @@
       transform: rotate(360deg);
     }
   }
+
+@media (max-width: 950px) {
+  .list_pokemon {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 620px) {
+  .list_pokemon {
+    grid-template-columns: repeat(1, 300px);
+  }
+}

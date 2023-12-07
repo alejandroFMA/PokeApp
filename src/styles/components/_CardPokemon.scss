@@ -1,14 +1,12 @@
 .cardPokemon {
     user-select: none;
     max-width: 300px; 
-    margin: 1rem; 
+    margin: 2rem; 
     border: 1px solid #ffffff22;
     background-color: #282c34;
     background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
     box-shadow: 0 7px 20px 5px #00000088;
     border-radius: .7rem;
-    backdrop-filter: blur(7px);
-    -webkit-backdrop-filter: blur(7px);
     transition: .5s all;
     display: flex;
     flex-direction: column;
@@ -33,26 +31,7 @@
     object-fit: cover;
   }
   
-  .cardPokemon::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%; 
-    height: 200%;
-    background-color: rgba(255, 255, 255, 0.1); 
-    transform: rotate(45deg);
-    transition: transform 0.5s, opacity 0.5s; 
-    opacity: 0; 
-    z-index: 0; 
-  }
-  .cardPokemon:hover::before {
-    transform: rotate(45deg) translate(100%, -100%);
-    opacity: 1; 
-  }
-
-
-
+  
 .cardPokemon h3{
     width: 80px;
     background-color: #ffffff;

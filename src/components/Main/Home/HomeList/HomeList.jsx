@@ -1,18 +1,16 @@
 import React from "react";
-import CardPokemon from "./CardPokemon"
+import HomeCard from './HomeCard'
 
-
-
-const ListPokemon = ({pokemons}) => {
+const HomeList = ({allPokemon}) => {
 
   return (
   
     <section className="list_pokemon">
-      {pokemons.map(pokemon => (
-        <CardPokemon 
+      {allPokemon.map(pokemon => (
+        <HomeCard 
           key={pokemon.id}
           title={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-          image={pokemon.image}
+          image={pokemon.sprites.other["official-artwork"].front_default}
           id={pokemon.id}
         />
       ))}
@@ -20,4 +18,4 @@ const ListPokemon = ({pokemons}) => {
   );
 };
 
-export default ListPokemon;
+export default HomeList;

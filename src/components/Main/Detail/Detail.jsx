@@ -27,10 +27,16 @@ const Detail = () => {
     </div>; 
   }
   return (
-    <div>
-      <h1>{pokemonDetails.name}</h1>
+    <articlw>
+      <h1>{pokemonDetails.name.charAt(0).toUpperCase() + pokemonDetails.name.slice(1)}</h1>
       <img src={pokemonDetails.sprites.other["official-artwork"].front_default} alt={pokemonDetails.name} />
-    </div>
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </articlw>
   );
 };
 
