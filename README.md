@@ -1,5 +1,5 @@
 
-##POKEAPP
+##POKEAPP##
 ![ash y pikachu](./public/5FBP.gif)
 
 POKEAPP es una aplicación web interactiva que permite a los usuarios crear, buscar y gestionar Pokémon personalizados. Esta herramienta ofrece una experiencia única en la que los usuarios pueden asignar características específicas a cada Pokémon, como ID, nombre, tipo y más, además de buscar y visualizar Pokémon existentes en una lista interactiva.
@@ -16,7 +16,7 @@ POKEAPP es una aplicación web interactiva que permite a los usuarios crear, bus
 ![Home](image.png)
 
 
-####Características
+####Características####
 
 - Creación de Pokémon: Los usuarios pueden crear un nuevo Pokémon proporcionando detalles como ID, nombre, tipo y una imagen.
 
@@ -28,7 +28,7 @@ POKEAPP es una aplicación web interactiva que permite a los usuarios crear, bus
 
 ![Buscador](image-1.png) ![Alt text](image-2.png)
 
-####Uso
+####Uso####
 Para usar la aplicación, sigue estos pasos:
 
 1. Abre la aplicación en tu navegador.
@@ -36,7 +36,7 @@ Para usar la aplicación, sigue estos pasos:
 3. Busca y visualiza los Pokémon en la lista.
 4. Elimina Pokémon según sea necesario.
 
-####Contribuciones
+####Contribuciones####
 
 Las contribuciones son bienvenidas. Si deseas contribuir, por favor:
 
