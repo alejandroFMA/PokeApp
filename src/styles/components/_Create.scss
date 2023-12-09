@@ -52,7 +52,8 @@
   
   .cardNewPokemon img { 
     border-radius: .5rem;
-    max-width: 50%;
+    margin:10px;
+    max-width: 90%;
     height: auto;
     object-fit:contain;
     
@@ -64,7 +65,7 @@
     background-color: #ffffff;
     text-align: center;
     padding: 1px 0;
-    margin-right: 10px;
+    margin:10px;
     border-radius: 30px;
     margin-left: auto;
     font-weight: 400;
@@ -101,8 +102,8 @@
 
 }
 .typesCreate>li>div{
-    margin-left: 20px;
-    padding: 0 15px;
+
+    padding: 0 19px;
     font-size: 22px;
   
 }

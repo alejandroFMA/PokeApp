@@ -89,6 +89,7 @@ function Create() {
           variant="outlined"
           placeholder="ID"
           type="number"
+          helperText="Choose from 1293"
           className="inputCreate"
           inputProps={{ min: 1293}}
           {...register("id", { required: true })}
