@@ -4,19 +4,23 @@
 
 POKEAPP es una aplicación web interactiva que permite a los usuarios crear, buscar y gestionar Pokémon personalizados. Esta herramienta ofrece una experiencia única en la que los usuarios pueden asignar características específicas a cada Pokémon, como ID, nombre, tipo y más, además de buscar y visualizar Pokémon existentes en una lista interactiva.
 
-#### Tecnologías Utilizadas
+#### Tecnologías Utilizadas :computer:
 
 **React**: Utilizado para construir la interfaz de usuario de la aplicación. React es una biblioteca de JavaScript para construir interfaces de usuario de manera eficiente y con menos código.
+
 **Material-UI**: Una biblioteca de componentes de React para un desarrollo más rápido y fácil. Se utilizó para diseñar la interfaz de usuario con un aspecto moderno y responsivo.
+
 **React Hook Form**: Una biblioteca para manejar formularios en React. Facilita la validación y el manejo de formularios con un rendimiento optimizado.
+
 **Context**: Proporciona una forma de pasar datos a través del árbol de componentes sin tener que pasar props manualmente en cada nivel.
+
 **CSS/SCSS**: Para estilos personalizados y diseño adaptativo, mejorando la experiencia del usuario en diferentes dispositivos.
 
 
 ![Home](image.png)
 
 
-#### Características
+#### Características :white_check_mark:	
 
 - Creación de Pokémon: Los usuarios pueden crear un nuevo Pokémon proporcionando detalles como ID, nombre, tipo y una imagen.
 
@@ -28,7 +32,7 @@ POKEAPP es una aplicación web interactiva que permite a los usuarios crear, bus
 
 ![Buscador](image-1.png) ![Alt text](image-2.png)
 
-#### Uso
+#### Uso :technologist:	
 Para usar la aplicación, sigue estos pasos:
 
 1. Abre la aplicación en tu navegador.
@@ -36,7 +40,7 @@ Para usar la aplicación, sigue estos pasos:
 3. Busca y visualiza los Pokémon en la lista.
 4. Elimina Pokémon según sea necesario.
 
-#### Contribuciones
+#### Contribuciones :pray:	
 
 Las contribuciones son bienvenidas. Si deseas contribuir, por favor:
 
@@ -46,7 +50,7 @@ Las contribuciones son bienvenidas. Si deseas contribuir, por favor:
 4. Envía un _pull request_.
 
 
-¡Gracias por la visita!
+¡Gracias por la visita! :nerd_face:
 
 Creado por: Alejandro Marquez Andrade
 
