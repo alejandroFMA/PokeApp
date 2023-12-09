@@ -4,6 +4,7 @@
 
 POKEAPP es una aplicación web interactiva que permite a los usuarios crear, buscar y gestionar Pokémon personalizados. Esta herramienta ofrece una experiencia única en la que los usuarios pueden asignar características específicas a cada Pokémon, como ID, nombre, tipo y más, además de buscar y visualizar Pokémon existentes en una lista interactiva.
 
+Pincha [aquí](https://super-vacherin-fb4ad9.netlify.app/) para ir a la aplicación
 #### Tecnologías Utilizadas :computer:
 
 **React**: Utilizado para construir la interfaz de usuario de la aplicación. React es una biblioteca de JavaScript para construir interfaces de usuario de manera eficiente y con menos código.
