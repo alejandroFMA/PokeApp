@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import Form from "./Form";
 import ListPokemon from "./ListPokemon";
 import { PokeContext } from "../../../context/PokeContext";
-import "../../../styles/components/_SearchComponent.scss"
+
 
 const SearchComponent = () => {
 
@@ -57,13 +57,13 @@ const SearchComponent = () => {
 
 
   return<>
-  <div>
+  <section className="formSearch">
     <Form
-    onSearch={handleSearch}/>
-    <button type="button" onClick={clearList}>CLEAR</button>
+    onSearch={handleSearch}
+    clearList={clearList}/>
     {errorMessage && <h3>{errorMessage}</h3>}
+    </section>
     {loading ? <div className="pokeloading"></div> : <ListPokemon pokemons={pokemons} />}
-    </div>
   </>
 };
 

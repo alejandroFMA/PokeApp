@@ -1,0 +1,50 @@
+@import '../utils/variables.scss';
+.btnMore { 
+    display: inline; 
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+  }
+
+  .btnContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+
+  
+  .homeListPokemon{
+    padding-top: 30px;
+    display: grid;
+    grid-gap: 10px; 
+    grid-auto-rows: auto; 
+    justify-content: center; 
+    grid-template-columns: repeat(3, 300px);
+  }
+  
+ 
+  
+@media (max-width: 950px) {
+    .homeListPokemon{
+      grid-template-columns: repeat(2, 300px);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .homeListPokemon{
+  
+        margin-top: 250px;
+  
+    }
+  
+  
+  }
+  
+  @media (max-width: 620px) {
+    .homeListPokemon {
+      grid-template-columns: repeat(1, 300px);
+    }
+  }

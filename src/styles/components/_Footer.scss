@@ -1,0 +1,18 @@
+@import '../utils/variables.scss';
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background: rgb(255,247,168);
+    background: linear-gradient(90deg, rgba(255,247,168,1) 0%, rgba(235,247,81,1) 100%);
+    width: 100%;
+    font-family: $font;
+    font-size: 22px;
+  
+}
+
+footer>img{
+    width: 15%;
+}

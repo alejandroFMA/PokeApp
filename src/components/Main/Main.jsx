@@ -4,6 +4,7 @@ import SearchComponent from "./SearchComponent";
 import Detail from "./Detail";
 import Home from "./Home";
 import Create from "./Create";
+import "../../styles/components/_Main.scss"
 const Main = () => {
   return (
     <>

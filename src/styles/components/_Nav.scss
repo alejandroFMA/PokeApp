@@ -1,0 +1,40 @@
+@import '../utils/variables.scss';
+
+nav{
+    display: flex;
+    background-color: $blue;
+    padding: 10px;
+    position: fixed;
+    z-index: 1000;
+   
+}
+
+.nav-bar>ul>li>img{
+    width: 25%;
+}
+
+.nav-bar {
+    list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding-left: 0;
+        font-family: $font;
+        font-size: 22px;
+       
+    
+    &>li>a {
+        text-decoration: none;
+         color: white;
+         padding-left: 30px;
+         padding-right: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .nav-bar {
+        flex-direction: column;
+        }
+    
+    }

@@ -1,13 +1,37 @@
+
+form{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+}
+.inputSearch{
+  width: 145%;
+}
+
+.formSearch{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top:100px;
+  -webkit-box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72); 
+  box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72);
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
 .list_pokemon {
+  padding-top: 30px;
   display: grid;
   grid-gap: 10px; 
   grid-auto-rows: auto; 
   justify-content: center; 
   grid-template-columns: repeat(3, 300px);
 }
-
-
-
 
 .pokeloading {
     position: relative;
@@ -56,6 +80,16 @@
   .list_pokemon {
     grid-template-columns: repeat(2, 300px);
   }
+}
+
+@media (max-width: 768px) {
+  .formSearch{
+
+      margin-top: 250px;
+
+  }
+
+
 }
 
 @media (max-width: 620px) {

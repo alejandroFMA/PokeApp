@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import { BrowserRouter } from "react-router-dom";
 import { PokeContext } from "./context/PokeContext";
 import "./App.css";
+import "./styles/styles.scss"
+
 
 function App() {
 

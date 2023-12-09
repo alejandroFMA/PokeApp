@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+
 import axios from "axios";
 import HomeList from "./HomeList";
 
@@ -12,7 +13,9 @@ const Home = () => {
 
   const fetchAllPokemon = async () => {
     try {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=20`);
+      const response = await axios.get(
+        `https://pokeapi.co/api/v2/pokemon/?limit=20`
+      );
       const pokemonData = response.data.results;
 
       const pokeData = await Promise.all(
@@ -31,7 +34,9 @@ const Home = () => {
 
   const loadMorePokemon = async () => {
     try {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?offset=${nextBatch}&limit=20`);
+      const response = await axios.get(
+        `https://pokeapi.co/api/v2/pokemon/?offset=${nextBatch}&limit=20`
+      );
       const pokemonData = response.data.results;
 
       const pokeData = await Promise.all(
@@ -41,8 +46,8 @@ const Home = () => {
         })
       );
 
-      setAllPokemon(prev => [...prev, ...pokeData]);
-      setNexBatch(prev => prev + 20); 
+      setAllPokemon((prev) => [...prev, ...pokeData]);
+      setNexBatch((prev) => prev + 20);
     } catch (error) {
       console.error("Error fetching Pokemon information:", error);
     }
@@ -50,8 +55,8 @@ const Home = () => {
 
   return (
     <>
-      <HomeList allPokemon={allPokemon} nextPokemon={nextBatch} />
-      <button onClick={loadMorePokemon}>Next 20 Pokemon</button>
+      <HomeList allPokemon={allPokemon} nextPokemon={nextBatch} loadMorePokemon={loadMorePokemon} />
+     
     </>
   );
 };

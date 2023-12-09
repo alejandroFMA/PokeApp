@@ -1,11 +1,12 @@
 import React from "react";
 import HomeCard from './HomeCard'
+import Button from '@mui/material/Button';
 
-const HomeList = ({allPokemon}) => {
+const HomeList = ({allPokemon,loadMorePokemon}) => {
 
   return (
   
-    <section className="list_pokemon">
+    <section className="homeListPokemon">
       {allPokemon.map(pokemon => (
         <HomeCard 
           key={pokemon.id}
@@ -14,6 +15,13 @@ const HomeList = ({allPokemon}) => {
           id={pokemon.id}
         />
       ))}
+     <div className="btnContainer">
+      <Button variant="contained"
+      type="button" 
+      className="btnMore" 
+      onClick={loadMorePokemon}     
+      >Next 20 Pokemon</Button>
+      </div>
     </section>
   );
 };

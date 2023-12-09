@@ -18,10 +18,9 @@
   }
   
   .cardPokemon:hover {
-    border: 1px solid #ffffff44;
+    border: 1px solid #ffffff22;
     box-shadow: 0 7px 50px 10px #000000aa;
-    transform: scale(1.015);
-    filter: brightness(1);
+    transform: scale(1.2);
   }
   
   .cardPokemon img { 
@@ -36,7 +35,8 @@
     width: 80px;
     background-color: #ffffff;
     text-align: center;
-    padding: 8px 0;
+    padding: 1px 0;
+    margin-right: 10px;
     border-radius: 30px;
     margin-left: auto;
     font-weight: 400;
@@ -48,6 +48,8 @@
     text-align: center;
     font-weight: 600;
     color: #ffffff;
+    font-size: 35px;
+    
 }
 
 
