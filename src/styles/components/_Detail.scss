@@ -36,19 +36,28 @@ align-items: flex-start;
 
 .types{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     list-style: none;
-    font-size: 18px;
+    font-size: 21px;
     padding-bottom: 10px;
+
+    
 
 
     &>li{
-       margin: 0px 50px;
-       padding:0 20px;
-       border-radius:5px;
-     
-    
+      border:solid 1px black ;
+ 
+       padding:5px 50px 5px; 
     }
+
+    
+ 
+
+
+
+
+
+
 }
 .moves{
     display: flex;
