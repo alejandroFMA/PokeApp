@@ -1,9 +1,20 @@
+.section-create{
+    padding-top: 30px;
+    display: grid;
+    grid-gap: 10px; 
+    grid-auto-rows: auto; 
+    justify-content: center; 
+    grid-template-columns: repeat(3, 300px);
+}
+
+
 .createPokemon{
     padding:80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 80px;
+    min-width: 400px;
     gap:20px;
     -webkit-box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72); 
     box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72);
@@ -11,6 +22,97 @@
     background-color: aliceblue;
     
 }
+
+
+
+.cardNewPokemon {
+    user-select: none;
+    max-width: 300px; 
+    margin: 2rem; 
+    border: 1px solid #ffffff22;
+    background-color: #282c34;
+    background: linear-gradient(0deg, rgba(40,44,52,1) 0%, rgba(17,0,32,.5) 100%);
+    box-shadow: 0 7px 20px 5px #00000088;
+    border-radius: .7rem;
+    transition: .5s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative; 
+    
+  }
+  
+  .cardNewPokemon:hover {
+    border: 1px solid #ffffff22;
+    box-shadow: 0 7px 50px 10px #000000aa;
+    transform: scale(1.2);
+  }
+  
+  .cardNewPokemon img { 
+    border-radius: .5rem;
+    max-width: 50%;
+    height: auto;
+    object-fit:contain;
+    
+  }
+  
+  
+.cardNewPokemon h3{
+    width: 80px;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 1px 0;
+    margin-right: 10px;
+    border-radius: 30px;
+    margin-left: auto;
+    font-weight: 400;
+
+}
+
+
+.pokeName{
+    text-align: center;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 35px;
+    
+}
+
+.typesCreate{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 18px;
+    padding-bottom: 10px;
+    list-style: none;
+
+
+    &>li{
+        display: flex;
+       margin: 0px 50px;
+       padding:0 10px;
+       border-radius:5px;
+       margin:10px;
+       align-items: center;
+         
+    }
+
+
+}
+.typesCreate>li>div{
+    margin-left: 20px;
+    padding: 0 15px;
+    font-size: 22px;
+    border-radius: 10px;
+}
+
+.deleteBtn{
+    margin-bottom:25px;
+
+}
+
 
 @media (max-width: 768px) {
     .createPokemon{

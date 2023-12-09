@@ -16,7 +16,8 @@ form{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  min-width: 400px;
+
   margin-top:100px;
   -webkit-box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72); 
   box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72);

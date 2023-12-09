@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { scroll } from "react-scroll";
 
 
 const Nav = () => {
-  return (
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+  return(
     <nav>
       
       <ul className="nav-bar">
@@ -11,13 +16,23 @@ const Nav = () => {
           <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" alt="pokemon title" />
         </li>
         <li className="nav-link">
-          <Link to="/" className="nav-link-active">Home</Link>
+          <Link to="/" 
+          className="nav-link-active"
+          onClick={scrollToTop}
+          >Home</Link>
         </li>
         <li className="nav-link">
-          <Link to="/search" className="nav-link">Search</Link>
+          <Link to="/search" 
+          className="nav-link"
+          onClick={scrollToTop}
+          >Search</Link>
         </li>
         <li className="nav-link">
-          <Link to="/create" className="nav-link">Create Pokemon</Link>
+          <Link to="/create" 
+          className="nav-link"
+          onClick={scrollToTop}
+          >
+            Create Pokemon</Link>
         </li>
       </ul>
     </nav>

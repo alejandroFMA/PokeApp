@@ -1,16 +1,18 @@
 .detailCard{
 display: flex;
-flex-direction: row-reverse;
+flex-direction: row;
 flex-wrap: wrap;
 margin-top: 150px;
 padding-bottom: 10px;
 list-style: none;
 justify-content: center;
-
+align-items: flex-start;
 }
 
 .detailCard img{
+    
     background-repeat: no-repeat;
+    background-size: 500px;
 }
 
 
