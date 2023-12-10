@@ -44,6 +44,7 @@ const Form = ({ onSearch, clearList }) => {
           className="inputSearch"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
+          required
         />
         <ButtonGroup
           disableElevation
