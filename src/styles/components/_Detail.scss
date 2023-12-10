@@ -1,4 +1,4 @@
-
+@import '../utils/variables.scss';
 
 .detailCard{
 display: flex;
@@ -8,7 +8,7 @@ margin-top: 150px;
 padding-bottom: 10px;
 list-style: none;
 justify-content: center;
-align-items: flex-start;
+align-items: center;
 background-repeat: no-repeat;
 background-size: 300px;
 
@@ -22,7 +22,7 @@ background-size: 300px;
 
 
 .description{
-
+    padding: 10px;
     font-size:30px;
 }
 
@@ -37,6 +37,24 @@ background-size: 300px;
     -webkit-box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72); 
   box-shadow: 2px 5px 18px 5px rgba(0,0,0,0.72);
 
+ 
+  
+
+}
+
+
+.info >h1{
+  font-size: 35px;
+  color: white;
+  background-color: $grey;
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+.info>h2{
+
+  margin: 10px;
 }
 
 .types{
@@ -44,7 +62,7 @@ background-size: 300px;
     flex-direction: column;
     list-style: none;
     font-size: 21px;
-    padding-bottom: 10px;
+    padding: 10px;
 
     
 
@@ -56,10 +74,13 @@ background-size: 300px;
     }
 
 
-
-
 }
 
+
+.description{
+    quotes: "«" "»";
+    font-style: italic;
+}
 
 
 .normal{
@@ -265,6 +286,7 @@ background-size: 300px;
     justify-content: space-evenly;
     background-color: white;
     border-radius: 10px;
+    margin: 10px;
     &>li{
         margin: 0px 10px;
         list-style: none;
@@ -277,6 +299,8 @@ background-size: 300px;
     display: flex;
     flex-direction: column;
     list-style: none;
+    margin-top: 10px;
+  
 }
 
 .baseStats li{

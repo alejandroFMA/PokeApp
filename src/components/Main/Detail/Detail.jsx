@@ -52,7 +52,7 @@ const Detail = () => {
         <div className="info">
 
           <h1>{pokemonDetails?.name?.charAt(0).toUpperCase() + pokemonDetails?.name?.slice(1)}</h1>
-          <p className="description">{isCreatedPokemon ? "????" : description}</p>
+          <q className="description">{isCreatedPokemon ? "????" : description}</q>
 
           <h2>Types</h2>
           <ul className="types">
@@ -63,10 +63,10 @@ const Detail = () => {
             )) : <li>????</li>}
           </ul>
 
-          <h2>Height & Weight</h2>
+        
           <ul className="bodyPokemon">
-            <li>Height: {isCreatedPokemon ? "????" : `${(Math.floor(pokemonDetails?.height) * 0.1).toFixed(2)}m`}</li>
-            <li>Weight: {isCreatedPokemon ? "????" : `${pokemonDetails?.weight * 0.10}kg`}</li>
+            <li><b>Height</b>: {isCreatedPokemon ? "????" : `${(Math.floor(pokemonDetails?.height) * 0.1).toFixed(2)}m`}</li>
+            <li><b>Weight</b>: {isCreatedPokemon ? "????" : `${pokemonDetails?.weight * 0.10}kg`}</li>
           </ul>
 
           <h2>Moves</h2>
