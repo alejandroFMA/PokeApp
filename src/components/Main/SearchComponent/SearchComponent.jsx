@@ -9,42 +9,44 @@ const SearchComponent = () => {
   const { pokemons } = useContext(PokeContext);
   const [filteredPokemons, setFilteredPokemons] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [error, setError] = useState('');
 
   const handleSearch = (searchedPokemon) => {
     setLoading(true);
-    setErrorMessage('');
+    setError('');
 
     if (searchedPokemon.trim() === '') {
       setFilteredPokemons(null); 
-      setErrorMessage('Please enter a Pokemon name.');
+      setError('Please enter a Pokemon name.');
     } else {
-      const results = pokemons.filter(pokemon =>
-        pokemon.name.toLowerCase().includes(searchedPokemon.toLowerCase())
-      );
+      setTimeout(() => {
+        const results = pokemons.filter(pokemon =>
+          pokemon.name.toLowerCase().includes(searchedPokemon.toLowerCase())
+        );
 
-      if (results.length) {
-        setFilteredPokemons(results);
-      } else {
-        setFilteredPokemons(null); 
-        setErrorMessage(`No Pokemon found named "${searchedPokemon}"`);
-      }
+        if (results.length) {
+          setFilteredPokemons(results);
+        } else {
+          setFilteredPokemons(null);
+          setErrorMessage(`No Pokemon found named "${searchedPokemon}"`);
+        }
+
+        setLoading(false);
+      }, 1500); 
     }
-
-    setLoading(false);
   };
 
   const clearList = () => {
     setFilteredPokemons(null); 
-    setErrorMessage('');
+    setError('');
   };
 
   
   const renderPokemons = () => {
     if (filteredPokemons) {
       return <ListPokemon pokemons={filteredPokemons} />;
-    } else if (errorMessage) {
-      return <h3>{errorMessage}</h3>;
+    } else if (error) {
+      return <h3>{error}</h3>;
     } else {
       return null; 
     }

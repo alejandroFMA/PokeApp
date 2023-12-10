@@ -16,6 +16,7 @@ const ListPokemon = ({pokemons}) => {
           title={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
           image={pokemon.sprites.other['official-artwork'].front_default}
           id={pokemon.id}
+          types={pokemon.types.map(typeInfo => typeInfo.type.name)}  
         />
       ))}
     </section>
