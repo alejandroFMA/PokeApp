@@ -12,6 +12,20 @@ const Detail = () => {
   const [description, setDescription] = useState("");
   const { id } = useParams();
 
+  const formatDescription = (text) => {  //para quitar los saltos de linea y cambiarlos por br
+   
+    const formattedText = text.replace(/\u000c/g, ' ').split('\n');
+
+   
+    return formattedText.map((line, index) => (
+      <React.Fragment key={index}>
+        {line}{index < formattedText.length - 1 && <br />}
+      </React.Fragment>
+    ));
+  };
+
+
+
   useEffect(() => {
     const apiPokemon = pokemons.find(pokemon => pokemon.id.toString() === id);
 
@@ -25,13 +39,13 @@ const Detail = () => {
 
   const fetchDescription = async (pokemonId) => {
     try {
-      const characteristicResponse = await axios.get(`https://pokeapi.co/api/v2/characteristic/${pokemonId}/`);
-      const englishDescription = characteristicResponse.data.descriptions.find(
+      const speciesResponse  = await axios.get(`https://pokeapi.co/api/v2/pokemon-species/${pokemonId}/`);
+      const englishDescription = speciesResponse.data.flavor_text_entries.find(
         desc => desc.language.name === "en"
       );
 
       if (englishDescription) {
-        setDescription(englishDescription.description);
+        setDescription(formatDescription(englishDescription.flavor_text));
       }
     } catch (error) {
       console.error("Error fetching Pokemon details:", error);
