@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
 import { PokeContext } from "../../../context/PokeContext";
 import pokeballImage from '../../../assets/pokeball.png';
+import missigno from '../../../assets/missigno.png';
 import axios from "axios";
 
 const Detail = () => {
@@ -37,7 +38,7 @@ const Detail = () => {
     }
   };
 
-  let imageUrl = pokemonDetails?.sprites?.other["official-artwork"]?.front_default || pokeballImage;
+  let imageUrl = pokemonDetails?.sprites?.other["official-artwork"]?.front_default || missigno;
   const isCreatedPokemon = pokemonDetails && pokemonDetails.id > 1292;
 
   return ( loading ? (
