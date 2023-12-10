@@ -81,7 +81,7 @@ const Detail = () => {
         
           <ul className="bodyPokemon">
             <li><b>Height</b>: {isCreatedPokemon ? "????" : `${(Math.floor(pokemonDetails?.height) * 0.1).toFixed(2)}m`}</li>
-            <li><b>Weight</b>: {isCreatedPokemon ? "????" : `${pokemonDetails?.weight * 0.10}kg`}</li>
+            <li><b>Weight</b>: {isCreatedPokemon ? "????" : `${Math.floor(pokemonDetails?.weight * 0.10).toFixed(2)}kg`}</li>
           </ul>
 
           <h2>Moves</h2>
