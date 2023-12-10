@@ -1,3 +1,5 @@
+
+
 .detailCard{
 display: flex;
 flex-direction: row;
@@ -7,12 +9,15 @@ padding-bottom: 10px;
 list-style: none;
 justify-content: center;
 align-items: flex-start;
+background-repeat: no-repeat;
+background-size: 300px;
+
 }
 
 .detailCard img{
-    
-    background-repeat: no-repeat;
-    background-size: 500px;
+  
+    max-width: 500px;
+ 
 }
 
 
@@ -36,7 +41,7 @@ align-items: flex-start;
 
 .types{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     list-style: none;
     font-size: 21px;
     padding-bottom: 10px;
@@ -45,20 +50,205 @@ align-items: flex-start;
 
 
     &>li{
-      border:solid 1px black ;
+      border:solid 0.5px black ;
  
        padding:5px 50px 5px; 
     }
-
-    
- 
-
-
 
 
 
 
 }
+
+
+
+.normal{
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+    padding: 0 10px;
+    align-items: center;
+
+    background-color:#e3e1e2;
+  }
+    .fire{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #d43939;
+
+    }
+
+    .water{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color:#4a5fcc;
+    }
+    .grass{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+  
+      background-color:#39fd6b;
+
+    }
+    
+    .ice{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color:#80859e;
+    }
+
+    .electric{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+  
+      background-color: #f9dc36;
+    }
+    .poison{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+
+      background-color: #b32cbb ;
+
+    }
+    .rock{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      background-color: #7f7f81;
+    }
+    .flying{
+
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      background-color: #95e0d8;
+      align-items: center;
+
+
+    }
+   .psychic{
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+    padding: 0 10px; 
+    align-items: center;
+
+    background-color: #ebb6c8;
+   }
+    .ghost{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #481d23;
+    }
+    .bug{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #406341;
+    }
+   .dragon{
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+    padding: 0 10px; 
+    align-items: center;
+
+    background-color: #ac540d;
+   }
+    .ground{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #b29665;
+    }
+    .fighting{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color:#352b2b;
+
+    }
+    .steel{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+  background-color: #617e8c;
+    }
+    .shadow{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px;
+      align-items: center;
+ 
+  background-color: #362a3d;
+    }
+    .dark{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+      background-color:  #292828;
+    }
+
+
+    .fairy{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #ff518b
+    }
+
+
+
+
 .moves{
     display: flex;
     list-style: none;

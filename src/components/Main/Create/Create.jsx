@@ -6,28 +6,51 @@ import { useState, useContext } from "react";
 import { PokeContext } from "../../../context/PokeContext";
 import { useForm } from "react-hook-form";
 import "../../../styles/components/_Create.scss";
+import Alert from '@mui/material/Alert';
 
 function Create() {
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { errors },
+    reset
   } = useForm();
 
-  const {pokemons, setPokemons} = useContext(PokeContext)
+  const {setPokemons} = useContext(PokeContext)
+  const [isPokemonCreated, setIsPokemonCreated] = useState(false);
+
   
 
   const onSubmit = (data) => {
-    setPokemons((pokemons => [...pokemons, data]));
+
+    if (data.typeOne === data.typeTwo) {
+      alert("Type One and Type Two cannot be the same"); 
+      return; 
+    }
+
+    const newPokemon = {
+      id: data.id,
+      name: data.name,
+      sprites: {
+        other: {
+          "official-artwork": {
+            front_default: data.image
+          }
+        }
+      },
+      types: [{ type: { name: data.typeOne } }, { type: { name: data.typeTwo } }],
+    };
+
+  
+    setPokemons((pokemons => [newPokemon, ...pokemons]));
+    setIsPokemonCreated(true)
     reset();
   };
+  
   const clearNewPokemon = () => {
+    setIsPokemonCreated(false)
     reset();
-    setPokemons([]);
   };
 
-  console.log(errors);
 
   const types = [
     { value: "normal", label: "Normal" },
@@ -52,29 +75,6 @@ function Create() {
     { value: "shadow", label: "Shadow" },
   ];
 
-  const typePokemonColor = {
-    default: "#ffffff",
-    normal: "#e3e1e2",
-    fire: "#d43939",
-    water: "#4a5fcc",
-    grass: "#39fd6b",
-    ice: "#80859e",
-    electric: "#f9dc36",
-    poison: "#b32cbb",
-    rock: "#7f7f81",
-    flying: "#95e0d8",
-    psychic: "#ebb6c8",
-    ghost: "#481d23",
-    bug: "#406341",
-    dragon: "#ac540d",
-    ground: "#b29665",
-    fighting: "#352b2b",
-    unknown: "#fae4b1",
-    steel: "#617e8c",
-    shadow: "#362a3d",
-    dark: "#292828",
-  };
-
   return (
     <>
       <form className="createPokemon" onSubmit={handleSubmit(onSubmit)}>
@@ -89,7 +89,7 @@ function Create() {
           variant="outlined"
           placeholder="ID"
           type="number"
-          helperText="Choose from 1293"
+          helperText="Start from 1293"
           className="inputCreate"
           inputProps={{ min: 1293}}
           {...register("id", { required: true })}
@@ -155,46 +155,17 @@ function Create() {
             Clear List
           </Button>
         </ButtonGroup>
+        {isPokemonCreated && (
+        <Alert variant="filled" severity="success">
+          Pokemon has been created!
+        </Alert>
+      )}
       </form>
+     
+    
 
-    <section className="section-create">
-      {pokemons.map((pokemon) => (
-        <article className="cardNewPokemon" key={pokemon.id}>
-          <h3>#{pokemon.id}</h3>
-          <img src={pokemon.image} alt={`Pokemon ${pokemon.name}`} />
-          <p className="pokeName">{pokemon.name}</p>
-          <ul className="typesCreate">
-            <li className="type-item">
-              <div
-                style={{
-                  background:
-                    typePokemonColor[pokemon.typeOne] ||
-                    typePokemonColor.default,
-                }}
-              >
-                {pokemon.typeOne}
-              </div>
-              {pokemon.typeTwo ? (
-                <div 
-                className="typeOneColor"
-                  style={{
-                    background:
-                      typePokemonColor[pokemon.typeTwo] ||
-                      typePokemonColor.default,
-                  }}
-                >
-                  {pokemon.typeTwo}
-                </div>
-              ) : (
-                <div>&nbsp;</div>
-              )}
-            </li>
-          </ul>
-        </article>
-    ))}
-    </section>         
     </>
   );
-}
+ }
 
 export default Create;

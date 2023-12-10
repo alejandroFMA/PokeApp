@@ -5,6 +5,8 @@ import CardPokemon from "./CardPokemon"
 
 const ListPokemon = ({pokemons}) => {
 
+  console.log(pokemons)
+
   return (
   
     <section className="list_pokemon">
@@ -12,7 +14,7 @@ const ListPokemon = ({pokemons}) => {
         <CardPokemon 
           key={pokemon.id}
           title={pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-          image={pokemon.image}
+          image={pokemon.sprites.other['official-artwork'].front_default}
           id={pokemon.id}
         />
       ))}

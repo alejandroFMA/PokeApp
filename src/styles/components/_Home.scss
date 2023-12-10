@@ -27,6 +27,243 @@
   
   }
   
+
+  .normal{
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+    padding: 0 10px;
+    align-items: center;
+
+    background-color:#e3e1e2;
+  }
+    .fire{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #d43939;
+
+    }
+
+    .water{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color:#4a5fcc;
+    }
+    .grass{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+  
+      background-color:#39fd6b;
+
+    }
+    
+    .ice{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color:#80859e;
+    }
+
+    .electric{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+  
+      background-color: #f9dc36;
+    }
+    .poison{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+
+      background-color: #b32cbb ;
+
+    }
+    .rock{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      background-color: #7f7f81;
+    }
+    .flying{
+
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      background-color: #95e0d8;
+      align-items: center;
+
+
+    }
+   .psychic{
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+    padding: 0 10px; 
+    align-items: center;
+
+    background-color: #ebb6c8;
+   }
+    .ghost{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #481d23;
+    }
+    .bug{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #406341;
+    }
+   .dragon{
+    display: flex;
+    flex-direction: row;
+    font-size: 21px;
+    padding: 0 10px; 
+    align-items: center;
+
+    background-color: #ac540d;
+   }
+    .ground{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #b29665;
+    }
+    .fighting{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color:#352b2b;
+
+    }
+    .steel{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+  background-color: #617e8c;
+    }
+    .shadow{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px;
+      align-items: center;
+ 
+  background-color: #362a3d;
+    }
+    .dark{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+      background-color:  #292828;
+    }
+
+
+    .fairy{
+      display: flex;
+      flex-direction: row;
+      font-size: 21px;
+      padding: 0 10px; 
+      align-items: center;
+
+      background-color: #ff518b
+    }
+
+    .pokeloading {
+      margin-top: 250px;
+      position: relative;
+      height: 100px;  /* Igual al ancho para formar un círculo */
+      width: 100px;
+      background: linear-gradient(to bottom, rgb(254, 0, 1) 50%, white 50%);
+      border-radius: 50%;
+      border: 8px solid black;
+      animation: spin 1s linear infinite;
+  }
+  
+  .pokeloading::before {
+      content: '';
+      position: absolute;
+      height: 8px;
+      width: 100px;
+      background: black;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+  
+  .pokeloading::after {
+      content: '';
+      position: absolute;
+      height: 38px;
+      width: 38px;
+      border-radius: 50%;
+      background: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset 0 0 0 8px black, inset 0 0 0 10px white, inset 0 0 0 12px black;
+  }
+    
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+
+
+
+
+
+
+
+
  
   
 @media (max-width: 950px) {

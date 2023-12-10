@@ -5,8 +5,12 @@ import { scroll } from "react-scroll";
 
 const Nav = () => {
 
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop();
+  // };
+
   const scrollToTop = () => {
-    scroll.scrollToTop();
+    window.scrollTo(0, 0);
   };
   return(
     <nav>

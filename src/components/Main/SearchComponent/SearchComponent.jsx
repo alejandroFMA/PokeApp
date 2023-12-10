@@ -1,6 +1,4 @@
 import React from "react";
-import axios from 'axios';
-
 import { useState, useContext } from "react";
 import Form from "./Form";
 import ListPokemon from "./ListPokemon";
@@ -8,64 +6,58 @@ import { PokeContext } from "../../../context/PokeContext";
 
 
 const SearchComponent = () => {
-
-  const {pokemons, setPokemons} = useContext(PokeContext)
-  const [loading, setLoading] = useState(false)
+  const { pokemons } = useContext(PokeContext);
+  const [filteredPokemons, setFilteredPokemons] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
-  const fetchPokemon = async (searchedPokemon) => {
-    setLoading(true)
+  const handleSearch = (searchedPokemon) => {
+    setLoading(true);
     setErrorMessage('');
 
-    if (pokemons.some(pokemon => pokemon.name.toLowerCase() === searchedPokemon.toLowerCase())) {
-      setErrorMessage(`You already searched ${searchedPokemon}`);
-      setLoading(false)    
-      return;
+    if (searchedPokemon.trim() === '') {
+      setFilteredPokemons(null); 
+      setErrorMessage('Please enter a Pokemon name.');
+    } else {
+      const results = pokemons.filter(pokemon =>
+        pokemon.name.toLowerCase().includes(searchedPokemon.toLowerCase())
+      );
+
+      if (results.length) {
+        setFilteredPokemons(results);
+      } else {
+        setFilteredPokemons(null); 
+        setErrorMessage(`No Pokemon found named "${searchedPokemon}"`);
+      }
     }
 
-    const delay = 1000
-    try {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${searchedPokemon.toLowerCase()}`);
-      console.log(response)
-
-      const newPokemon = {
-        id: response.data.id,
-        name: response.data.name,
-        image: response.data.sprites.other["official-artwork"].front_default
-      };
-
-      
-      setPokemons(prevPokemons =>[newPokemon, ...prevPokemons ]);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      setErrorMessage(`${searchedPokemon} not found`);
-      setLoading(false)  
-    } finally{
-      setTimeout(() => setLoading(false), delay);    }
+    setLoading(false);
   };
 
-
-  const handleSearch = (searchedPokemon) => {
-    fetchPokemon(searchedPokemon)
-
-  }
-
-
   const clearList = () => {
+    setFilteredPokemons(null); 
+    setErrorMessage('');
+  };
 
-    setPokemons([])
-  }
+  
+  const renderPokemons = () => {
+    if (filteredPokemons) {
+      return <ListPokemon pokemons={filteredPokemons} />;
+    } else if (errorMessage) {
+      return <h3>{errorMessage}</h3>;
+    } else {
+      return null; 
+    }
+  };
 
-
-  return<>
-  <section className="formSearch">
-    <Form
-    onSearch={handleSearch}
-    clearList={clearList}/>
-    {errorMessage && <h3>{errorMessage}</h3>}
-    </section>
-    {loading ? <div className="pokeloading"></div> : <ListPokemon pokemons={pokemons} />}
-  </>
+  return (
+    <>
+      <section className="formSearch">
+        <Form onSearch={handleSearch} clearList={clearList} />
+      </section>
+      {loading ? <div className="pokeloading"></div> : renderPokemons()}
+    </>
+  );
 };
 
 export default SearchComponent;
