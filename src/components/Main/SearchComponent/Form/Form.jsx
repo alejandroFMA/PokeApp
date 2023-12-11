@@ -29,11 +29,7 @@ const Form = ({ onSearch, clearList }) => {
 
   return (
     <>
-      <h1>Search</h1>
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
-        alt="pokemon title"
-      />
+      <h1>Search Pokemon</h1>
       <form onSubmit={handleSubmit}>
         <TextField
           id="pokemon-name"

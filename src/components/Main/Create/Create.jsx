@@ -18,7 +18,6 @@ function Create() {
   const {setPokemons} = useContext(PokeContext)
   const [isPokemonCreated, setIsPokemonCreated] = useState(false);
 
-  
 
   const onSubmit = (data) => {
 
@@ -78,11 +77,7 @@ function Create() {
   return (
     <>
       <form className="createPokemon" onSubmit={handleSubmit(onSubmit)}>
-        <h1>Create your own</h1>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"
-          alt="pokemon title"
-        />
+        <h1>Create your own Pokemon</h1>
         <TextField
           id="pokemon-id"
           label="ID"

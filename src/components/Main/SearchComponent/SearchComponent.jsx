@@ -28,7 +28,7 @@ const SearchComponent = () => {
           setFilteredPokemons(results);
         } else {
           setFilteredPokemons(null);
-          setErrorMessage(`No Pokemon found named "${searchedPokemon}"`);
+          setError(`No Pokemon found named "${searchedPokemon}"`);
         }
 
         setLoading(false);
