@@ -1,7 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { scroll } from "react-scroll";
 
+import { Link } from "react-router-dom";
 
 const Nav = () => {
 

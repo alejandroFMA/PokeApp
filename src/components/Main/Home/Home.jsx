@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { PokeContext } from '../../../context/PokeContext';
 import axios from "axios";
 import HomeList from "./HomeList";
@@ -20,7 +20,7 @@ const Home = () => {
     let allPokemon = [];
   
     try {
-      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=1292`);
+      const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/?limit=800`);
       allPokemon = response.data.results;
   
       const pokemonData = await Promise.all(
